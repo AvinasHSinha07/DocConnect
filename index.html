@@ -10,55 +10,32 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- header starts -->
     <header>
-      <!-- <div>
-            <div class="navbar bg-[#4A55A2] text-white">
-                <div class="navbar-start">
-                  <div class="dropdown md:hidden">
-                    <label tabindex="0" class="btn btn-ghost btn-circle">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                    </label>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#4A55A2] rounded-box w-52">
-                      <li><a>Homepage</a></li>
-                      <li><a>About Us</a></li>
-                      <li><a>Login</a></li>
-                      <li><a>Sign Up</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="navbar-start">
-                  <a class="btn btn-ghost normal-case text-xl">DocConnecT</a>
-                </div>
-                <div class="navbar-end">
-                    <ul class="flex gap-3 items-center justify-around">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Login</a></li>
-                        <li><a href="">Signup</a></li>
-                    </ul>
-                  
-                  
-                </div>
-              </div>
-        </div> -->
       <!-- navbar starts here -->
       <!-- bg-[#4A55A2] -->
-      <div class="bg-[#0f2247] flex items-center justify-between p-4">
+      <div
+        class="bg-[#0f2247] flex flex-col md:flex-row items-center justify-between md:p-4"
+      >
         <div>
           <button
-            class="bg-none text-white border-none hover:text-blue-400 hover:bg-[white] p-3 rounded-lg capitalize"
+            class="bg-none text-white border-none hover:text-blue-400 hover:bg-[white] md:p-3 rounded-lg capitalize"
           >
             <a href="">DocConnecT</a>
           </button>
         </div>
         <div>
           <!-- hover:text-red-500 border-[1px] p-2 text-xl btn rounded-xl -->
-          <ul class="flex items-center justify-around gap-6 text-white">
+          <ul class="flex items-center justify-around md:gap-6 text-white">
             <li
               class="bg-none text-white border-none hover:text-blue-400 hover:bg-[white] p-3 rounded-lg capitalize"
             >
@@ -92,21 +69,27 @@
       <!-- banner section starts -->
 
       <div
-        class="h-screen flex flex-col md:flex-row items-center justify-center md:gap-5 md:p-8 bg-[#0f2247]"
+        class="flex flex-col md:flex-row items-center justify-center md:gap-5 md:p-8 bg-[#0f2247]"
       >
-        <div class="md:p-4 w-1/2">
-          <h1 class="md:text-7xl text-2xl mb-3 text-[#EF6262] font-extrabold">
+        <div class="md:p-4 md:w-1/2">
+          <h1
+            class="md:text-7xl text-center md:text-left mt-3 text-2xl mb-3 text-[#EF6262] font-extrabold"
+          >
             Find Your Doctor
           </h1>
-          <p class="text-xl mb-5 w-1/2 text-left text-white">
+          <p class="text-xl mb-5 text-center md:text-left text-white">
             Make an Appointment with some great doctors.Only need a few clicks
             and you are done
           </p>
-          <button
-            class="btn bg-[#EF6262] border-none text-white hover:text-blue-400"
+          <div
+            class="flex items-center justify-center md:items-start md:justify-start"
           >
-            Book now
-          </button>
+            <button
+              class="btn bg-[#EF6262] border-none text-white hover:text-blue-400"
+            >
+              Book now
+            </button>
+          </div>
         </div>
 
         <div class="rounded-xl">
@@ -123,161 +106,173 @@
 
     <!-- main starts here -->
     <main>
-       
       <!-- how it works section -->
-        <h3 class="text-center text-5xl mt-4">How our system works</h3>
-        <hr class="md:w-1/2 m-auto mt-3 border-2 border-rose-700 rounded-lg">
-        <div class="h-screen max-w-5xl m-auto mt-5 p-5 grid grid-cols-1 md:grid-rows-3 md:grid-cols-2 gap-4 ">
-            <div class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]">
-                <img class="w-12" src="./images/arrow.png" alt="">
-                <div class="w-3/4 ">
-                <h3 class="text-3xl mb-1">Signup</h3>
-                <p class="text-base">Signup by filling up the information</p>
-            </div>
-            </div>
-            <div class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471] ">
-                <img class="w-12" src="./images/arrow.png" alt="">
-                <div class="w-3/4">
-                    <h3 class="text-3xl mb-1">Login</h3>
-                    <p class="text-base">Login using your email and password</p>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]">
-                <img class="w-12" src="./images/arrow.png" alt="">
-                <div class="w-3/4">
-                    <h3 class="text-3xl mb-1">Search Doctor</h3>
-                    <p class="text-base">Find your doctor easily with a minimum of effort. We've kept everything organised for you. </p>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]">
-                <img class="w-12" src="./images/arrow.png" alt="">
-                <div class="w-3/4">
-                    <h3 class="text-3xl mb-1">Book Appointment</h3>
-                    <p class="text-base">Ask for an appointment of the doctor quickly with almost a single click. We take care of the rest. </p>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl  hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]">
-                <img class="w-12" src="./images/arrow.png" alt="">
-                <div class="w-3/4">
-                    <h3 class="text-3xl mb-1">Get Well Soon</h3>
-                    <p class="text-base">Visit the doctor, take the service based on your appointment. Get back to good health and happiness. </p>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl  hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]">
-                <img class="w-12" src="./images/arrow.png" alt="">
-                <div class="w-3/4">
-                    <h3 class="text-3xl mb-1">Feedback</h3>
-                    <p class="text-base">Give rating to the doctor based on your satisfaction so that your rating will help other patients to select best doctor</p>
-                </div>
-            </div>
+      <h3 class="text-center text-5xl mt-4">How our system works</h3>
+      <hr class="md:w-1/2 m-auto mt-3 border-2 border-rose-700 rounded-lg" />
+      <div
+        class="md:h-screen max-w-5xl m-auto mt-5 p-5 grid grid-cols-1 md:grid-rows-3 md:grid-cols-2 gap-4"
+      >
+        <div
+          class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]"
+        >
+          <img class="w-12" src="./images/arrow.png" alt="" />
+          <div class="w-3/4">
+            <h3 class="text-3xl mb-1">Signup</h3>
+            <p class="text-base">Signup by filling up the information</p>
+          </div>
         </div>
-         <!-- how it works section -->
+        <div
+          class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]"
+        >
+          <img class="w-12" src="./images/arrow.png" alt="" />
+          <div class="w-3/4">
+            <h3 class="text-3xl mb-1">Login</h3>
+            <p class="text-base">Login using your email and password</p>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]"
+        >
+          <img class="w-12" src="./images/arrow.png" alt="" />
+          <div class="w-3/4">
+            <h3 class="text-3xl mb-1">Search Doctor</h3>
+            <p class="text-base">
+              Find your doctor easily with a minimum of effort. We've kept
+              everything organised for you.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]"
+        >
+          <img class="w-12" src="./images/arrow.png" alt="" />
+          <div class="w-3/4">
+            <h3 class="text-3xl mb-1">Book Appointment</h3>
+            <p class="text-base">
+              Ask for an appointment of the doctor quickly with almost a single
+              click. We take care of the rest.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]"
+        >
+          <img class="w-12" src="./images/arrow.png" alt="" />
+          <div class="w-3/4">
+            <h3 class="text-3xl mb-1">Get Well Soon</h3>
+            <p class="text-base">
+              Visit the doctor, take the service based on your appointment. Get
+              back to good health and happiness.
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex items-center justify-center rounded-xl gap-5 p-2 shadow-xl hover:text-white cursor-pointer ease-in delay-75 duration-200 hover:bg-[#1a2471]"
+        >
+          <img class="w-12" src="./images/arrow.png" alt="" />
+          <div class="w-3/4">
+            <h3 class="text-3xl mb-1">Feedback</h3>
+            <p class="text-base">
+              Give rating to the doctor based on your satisfaction so that your
+              rating will help other patients to select best doctor
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- how it works section -->
 
-
-         <!-- Team members -->
-         <div class=" mt-5 mb-5 max-w-5xl m-auto">
-            <h2 class="text-center text-4xl mb-12">Meet our team members</h2>
-          <div class="flex items-center justify-around gap-3 ">
-          <div class="card bg-base-100 shadow-xl flex-1 border-2">
+      <!-- Team members starts here -->
+      <div class="mt-5 md:mt-5 max-w-5xl m-auto">
+        <h2 class="text-center text-4xl mb-12">Meet our team members</h2>
+        <div
+          class="flex flex-col md:flex-row items-center justify-around gap-3"
+        >
+          <div class="card bg-base-100 shadow-xl flex-1 border-2 p-8">
             <div class="avatar mt-3 flex items-center justify-center">
-              <div class="w-24 rounded-full ring ring-[#241468] ring-offset-base-100 ring-offset-2">
+              <div
+                class="w-24 rounded-full ring ring-[#241468] ring-offset-base-100 ring-offset-2"
+              >
                 <img src="./images/apu.jpg" />
               </div>
             </div>
             <div class="card-body">
-              <h2 class="text-center font-bold text-xl">
-                Rabiul Apu
-              </h2>
+              <h2 class="text-center font-bold text-xl">Apu</h2>
               <p class="text-center">Developer</p>
               <div class="flex items-center justify-center gap-4">
                 <a href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
                 <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
                 <a href=""><i class="fa-solid fa-envelope text-2xl"></i></a>
-                
               </div>
-              
             </div>
           </div>
-          <div class="card bg-base-100 shadow-xl flex-1 border-2">
+          <div class="card bg-base-100 shadow-xl flex-1 border-2 p-8">
             <div class="avatar mt-3 flex items-center justify-center">
-              <div class="w-24 rounded-full ring ring-primary ring-[#241468] ring-offset-base-100 ring-offset-2">
+              <div
+                class="w-24 rounded-full ring ring-primary ring-[#241468] ring-offset-base-100 ring-offset-2"
+              >
                 <img src="./images/IMG_8225 conv.jpeg" />
               </div>
             </div>
             <div class="card-body">
-              <h2 class="text-center font-bold text-xl">
-                Avinash Sinha
-              </h2>
+              <h2 class="text-center font-bold text-xl">Avinash</h2>
               <p class="text-center">Developer</p>
               <div class="flex items-center justify-center gap-4">
                 <a href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
                 <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
                 <a href=""><i class="fa-solid fa-envelope text-2xl"></i></a>
-                
               </div>
-              
             </div>
           </div>
-          <div class="card bg-base-100 shadow-xl flex-1 border-2 ">
+          <div class="card bg-base-100 shadow-xl flex-1 border-2 p-8">
             <div class="avatar mt-3 flex items-center justify-center">
-              <div class="w-24 rounded-full ring ring-primary ring-[#241468] ring-offset-base-100 ring-offset-2">
+              <div
+                class="w-24 rounded-full ring ring-primary ring-[#241468] ring-offset-base-100 ring-offset-2"
+              >
                 <img src="./images/sourav.jpg" />
               </div>
             </div>
             <div class="card-body">
-              <h2 class="text-center font-bold text-xl">
-                Sourav Talukdar
-              </h2>
+              <h2 class="text-center font-bold text-xl">Sourav</h2>
               <p class="text-center">Developer</p>
               <div class="flex items-center justify-center gap-4">
                 <a href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
                 <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
                 <a href=""><i class="fa-solid fa-envelope text-2xl"></i></a>
-                
               </div>
-              
             </div>
           </div>
-          <div class="card bg-base-100 shadow-xl flex-1 border-2">
+          <div class="card bg-base-100 shadow-xl flex-1 border-2 p-8">
             <div class="avatar mt-3 flex items-center justify-center">
-              <div class="w-24 rounded-full ring ring-primary ring-[#241468] ring-offset-base-100 ring-offset-2">
+              <div
+                class="w-24 rounded-full ring ring-primary ring-[#241468] ring-offset-base-100 ring-offset-2"
+              >
                 <img src="./images/abed.jpg" />
               </div>
             </div>
             <div class="card-body">
-              <h2 class="text-center font-bold text-xl">
-                Sajjad Abed
-              </h2>
+              <h2 class="text-center font-bold text-xl">Abed</h2>
               <p class="text-center">Developer</p>
               <div class="flex items-center justify-center gap-4">
                 <a href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
                 <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
                 <a href=""><i class="fa-solid fa-envelope text-2xl"></i></a>
-                
               </div>
-
-              
             </div>
           </div>
-          
-          
-          
         </div>
-         </div>
+      </div>
+      <!-- team members ends here -->
+
+      <!-- faq starts here -->
+      <div>
+        
+      </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+      <!-- faq ends here -->
 
 
 
