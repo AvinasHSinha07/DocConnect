@@ -11,6 +11,6 @@ pool.on('error', (err, client) => {
     console.error('Error in PostgreSQL pool:', err);
 });
 module.exports = pool;
-// Example usage of the insertUserData function
+
 
 

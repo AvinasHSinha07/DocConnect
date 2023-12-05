@@ -21,7 +21,12 @@ app.get('/', (req, res) => {
 app.get('/signup', (req, res) => {
   res.render('signup', { root: __dirname });
 });
-
+app.get('/login', (req, res) => {
+  res.render('login', { root: __dirname });
+});
+app.get('/home', (req, res) => {
+  res.render('home', { root: __dirname });
+});
 // Define the insertUserData function
 const insertUserData = async (email, password) => {
   try {
@@ -69,12 +74,46 @@ app.post('/register', async (req, res) => {
   // If all checks pass, insert user data into the database
   try {
     await insertUserData(email, password);
-    return res.status(200).json({ message: 'User registered successfully.' });
+    res.redirect('/login?accountCreated=true');
   } catch (error) {
     console.error('Error registering user:', error);
     return res.status(500).json({ error: 'An error occurred while registering the user.' });
   }
 });
+
+app.post('/loggedin', async (req, res) => {
+  const { email, password, rememberMe } = req.body;
+
+  // Query the database to check if the email and password match
+  const query = 'SELECT * FROM patients WHERE email = $1 AND password = $2';
+  const values = [email, password];
+
+  try {
+    const result = await pool.query(query, values);
+
+    if (result.rows.length === 1) {
+      // Successful login
+      if (rememberMe) {
+        // Set a persistent cookie (e.g., "remember_token")
+        res.cookie('remember_token', 'some_unique_value', {
+          // Set the cookie to expire in a long duration (e.g., 30 days)
+          expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+          httpOnly: true, // Cookie accessible only via HTTP
+        });
+      }
+  
+      // Redirect the user to the home page
+      res.redirect('home');
+    } else {
+      // Invalid credentials
+      res.status(401).json({ error: 'Invalid email or password.' });
+    }
+  } catch (error) {
+    console.error('Error during login:', error);
+    res.status(500).json({ error: 'An error occurred during login.' });
+  }
+});
+
 
 app.use((req, res) => {
   res.render('404', { root: __dirname });
